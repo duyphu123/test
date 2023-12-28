@@ -1,0 +1,8 @@
+<div>
+    <h2>Authentication</h2>
+    <p *ngIf="isLoggedIn; else notLoggedIn">You are logged in.</p>
+    <ng-template #notLoggedIn><p>You are not logged in.</p></ng-template>
+    <button (click)="login()" *ngIf="!isLoggedIn">Login</button>
+    <button (click)="logout()" *ngIf="isLoggedIn">Logout</button>
+  </div>
+  
